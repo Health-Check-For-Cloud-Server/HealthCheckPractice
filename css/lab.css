@@ -1,0 +1,232 @@
+﻿*{
+	margin:0px;
+	padding:0px;
+}
+#wrap_page_title{
+	height:120px;
+	background-color:#1E90FF;
+	box-shadow:0px 10px 10px #aaa;
+}
+#page_title{
+	height:110px;
+	padding-top:10px;
+	width:1000px;
+	margin:auto;
+	background-color:#1E90FF;
+}
+#page_title h1{
+	border-left:5px solid #fff;
+	padding-left:30px;
+	font-family:华文新魏;
+	color:white;
+	height:70px;
+	line-height:70px;
+}
+#page_title h2{
+	float:left;
+	padding-left:50px;
+	height:40px;
+	width:300px;
+	line-height:40px;
+	color:#ddd;
+	font-family:楷体;
+}
+#page_title h3{
+	float:right;
+	height:40px;
+	width:300px;
+	line-height:40px;
+	color:#fff;
+	font-family:微软雅黑;
+	font-size:15px;
+}
+
+#wrap_page_content{
+	width:1000px;
+	margin:auto;
+}
+#wrap_left{
+	float:left;
+	width:280px;
+}
+#lab_description{
+	border-right:1px dotted #aaa;
+	font-family:微软雅黑;
+	float:right;
+	width:230px;
+	padding:20px 20px 0px 0px;
+}
+#lab_description ol{
+	margin-top:20px;
+	margin-left:20px;
+}
+#implementation_explanation{
+	float:right;
+	border-right:1px dotted #aaa;
+	font-family:微软雅黑;
+	width:230px;
+	height:320px;
+	padding:20px 20px 0px 0px;
+}
+#implementation_explanation ul{
+	margin-top:20px;
+	margin-left:20px;
+}
+
+#add_control{
+	margin-top:20px;
+	float:right;
+	height:100px;
+	border:1px solid #A0522D;
+	width:700px;
+}
+#add_control #add_description{
+	float:left;
+	margin:10px;
+	border-right:2px dotted #ccc;
+	padding:10px;
+	width:400px;
+	text-indent:2em;
+	height:60px;
+	color:#555;
+	font-family:微软雅黑;
+}
+#add_control ul{
+	float:left;
+	margin-left:20px;
+	padding:10px;
+	height:80px;
+	overflow:hidden;
+}
+#add_control ul input[type="checkbox"]{
+	margin-right:10px;
+}
+#add_control ul li{
+	margin-left:10px;
+	height:22px;
+}
+#add_control #generate_btn{
+	float:right;
+	text-align:center;
+	background:#1E90FF;
+	width:80px;
+	height:80px;
+	line-height:80px;
+	margin:10px;
+	font-family:微软雅黑;
+	border-radius:5px;
+	box-shadow:0px 3px 3px #aaa;
+	color:#ddd;
+	font-size:20px;
+	font-weight:bold;
+	transition:background-color 0.5s,color 0.5s;
+}
+#add_control #generate_btn:hover{
+	cursor:pointer;
+	background-color:#3fb2ff;
+	color:#fff;
+	transition:background-color 0.2s,color 0.2s;
+}
+
+#display_board{
+	margin-top:20px;
+	float:right;
+	width:700px;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	border:1px solid #ccc;
+	margin-bottom:10px;
+	color:#A0522D;
+	font-family:微软雅黑;
+}
+
+#middle_code{
+	margin-top:20px;
+	float:right;
+	width:680px;
+	padding:20px 10px 20px 10px;
+	border:1px solid #aaa;
+	word-break:break-all; /*支持IE，chrome，FF不支持*/
+	word-wrap:break-word;/*支持IE，chrome，FF*/
+	
+
+}
+
+#lab_implementation{
+	float:right;
+	width:700px;
+	padding:20px 0px 20px 0px;
+	border:1px dotted #aaa;
+	margin-bottom:50px;
+	margin-top:20px;
+}
+#lab_implementation .lab_block{
+	text-align:center;
+	padding:5px;
+	border:1px solid #aaa;
+	overflow:hidden;
+	margin:5px 0px 5px 0px;
+}
+#lab_implementation form {
+	position:relative;
+	margin:auto;
+	margin-top:10px;
+	border:1px solid #A0522D;
+	width:300px;
+	height:110px;
+}
+
+#lab_implementation form input[type="text"]{
+	position:absolute;
+	margin:10px 20px 5px 20px;
+	padding:0px 5px 0px 5px;
+	width:260px;
+	height:30px;
+	top:0px;
+}
+#lab_implementation input[type="button"]{
+	position:absolute;
+	width:100px;
+	margin-left:30px;
+	bottom:10px;
+	left:60px;
+}
+#lab_implementation form .radio{
+	position:absolute;
+	width:100px;
+	top:45px;
+	left:20px;
+}
+#lab_implementation form .checkbox{
+	position:absolute;
+	width:150px;
+	top:45px;
+	right:20px;
+}
+#lab_implementation input[type="radio"],input[type="checkbox"]{
+	margin:5px;
+}
+#control_btns{
+	position:fixed;
+	right:30px;
+	top:200px;
+}
+#control_btns p{
+	text-align:center;
+	background:#1E90FF;
+	height:30px;
+	width:120px;
+	line-height:30px;
+	margin-top:10px;
+	font-family:微软雅黑;
+	border-radius:5px;
+	box-shadow:0px 3px 3px #aaa;
+	color:#ddd;
+}
+#control_btns p:hover{
+	cursor:pointer;
+	background-color:#3fb2ff;
+	color:#fff;
+	transition:background-color 0.2s,color 0.2s;
+}
