@@ -1,7 +1,7 @@
 ﻿<html>
 	<head>
-		<title>jQuery练习</title>
-		<link rel="stylesheet" type="text/css" href="./css/lab.css" />
+		<title>HealthCheck</title>
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
 		<script type="text/javascript" src="./jquery/jquery.js"></script>
 		<script type="text/javascript" src="./js/function.js"></script>
 		<script type="text/javascript" src="./js/ready.js"></script>
@@ -9,58 +9,18 @@
 	<body>
 		<div id="wrap_page_title">
 			<div id="page_title">
-				<h1>IBM创新实验室项目第四~五周</h1>
-				<h2>练习：控件的保存与加载</h2>
-				<h3>完成时间：2015.1.2</h3>
+				<h1>───── HealthCheck ─────</h1>
 			</div>
+			<div id="btn_add_a_new_session">
+				<p>Add</p>
+				<p>a new session</p>
+			</div>
+		</div>
+		<div id="board_display_run_information">
+
 		</div>
 		<div id="wrap_page_content">
-			<div id="wrap_left">
-				<div id="lab_description">
-					<h3>实验要求：</h3>
-					<ol>
-						<li>使用jQuery</li>
-						<li>生成控件</li>
-						<li>能将控件用中间代码描述并存储到文件</li>
-						<li>从文件读取中间代码，解析并生成控件</li>
-					</ol>
-				</div>
-				<div id="implementation_explanation">
-					<h3>实现描述：</h3>
-					<ul>
-						<li>点击添加，添加控件</li>
-						<li>点击保存，将mid_code （json字符串）发送到服务器，服务器将字符串保存到文件</li>
-						<li>点击加载，服务器读取文件，将文件内容交给js处理，js解析json，生成控件</li>				
-						<li>清除当前控件，清除对象obj中内容，清除mid_cod</li>				
-						<li>清除实现层，清除层中所有子对象</li>				
-					</ul>
-				</div>
-			</div>
-			<div id="add_control">
-				<div id="add_description">
-					选择需要生成的控件，点击添加，将在下方层中添加一个带有选中控件的层。
-					按钮是默认选择的，点击生成的按钮控件，会将表单信息提交到服务器。
-				</div>
-				<form id="add_control_list">
-					<ul>
-						<li><input type="checkbox" name="widget_choice" value="input_text" />输入框</li>
-						<li><input type="checkbox" name="widget_choice" value="single_choice" />单选框</li>
-						<li><input type="checkbox" name="widget_choice" value="multiple_choice" />复选框</li>
-						<li><input type="checkbox" name="widget_choice" value="button" checked="checked" disabled="disabled" />按钮</li>
-					</ul> 
-					<p id="generate_btn"/>添加</p>
-				</form>
-			</div>
-			<div id="middle_code"></div>
-			<div id="lab_implementation">		
-			</div>
-		</div>
-		<div id="control_btns">
-			<p id="mid_code_display">隐藏中间代码</p>
-			<p id="save">保存控件</p>
-			<p id="reload">加载控件</p>
-			<p id="clear_widget">清除当前控件</p>
-			<p id="clear_div">清除实现层</p>
+
 		</div>
 	</body>
 </html>
