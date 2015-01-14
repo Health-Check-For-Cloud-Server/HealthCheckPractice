@@ -1,0 +1,145 @@
+﻿*{
+	margin:0px;
+	padding:0px;
+}
+
+@font-face{
+	font-family:apple;
+	src:url('../font/Monaco+YaHei.ttf');
+}
+
+body{
+	background-color: #efefef;
+}
+
+#wrap_page_title{
+	height:120px;
+	background-color:#1E90FF;
+	box-shadow:0px 10px 10px #aaa;
+}
+#page_title{
+	height:110px;
+	padding-top:10px;
+	width:1000px;
+	margin:auto;
+	background-color:#1E90FF;
+}
+#page_title h1{
+	padding-left:30px;
+	font-family: Monotype Corsiva;
+	color:white;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	font-size: 4em;
+}
+
+
+#btn_add_a_new_session{
+	cursor: pointer;
+	position: fixed;
+	width: 120px;
+	height: 120px;
+	background-color: mediumpurple;
+	right: 100px;
+	top: 300px;
+	border-radius:25px;
+	font-family: cursive;
+	color: #ffffff;
+	text-align: center;
+	transition:background-color 0.5s;
+	box-shadow: 7px 7px 20px #555;
+}
+
+#btn_add_a_new_session p:first-child{
+	height: 70px;
+	line-height: 90px;
+	font-size: 35px;
+	font-weight: 900;
+}
+#btn_add_a_new_session:hover{
+	background-color: #7f4eb8;
+	transition:background-color 0.5s;
+}
+
+#wrap_page_content{
+	width:1000px;
+	margin:auto;
+}
+.div_session{
+	position: relative;
+	background-color: #fff;
+	width: 760px;
+	padding: 20px;
+	margin: 20px 100px 20px 100px;
+	box-shadow: 5px 5px 25px #aaa;
+	border-radius: 5px;
+}
+.label_session{
+	position: absolute;
+	left: -120px;
+	background-color: #3581ff;
+	color: #ffffff;
+	width: 100px;
+	padding-left:20px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 10px 0px 0px 10px;
+	font-family: apple;
+}
+.div_test,.div_run{
+	height: 50px;
+	background-color: red;
+	position: relative;
+}
+
+.div_check{
+
+}
+.btn_add{
+
+}
+
+.input{
+	float: left;
+	width: 500px;
+	font-size: 20px;
+	padding-left: 5px;
+	font-family: apple;
+}
+.label{
+	float: left;
+	background-color: #555555;
+	color: #fff;
+	width: 80px;
+	border-radius: 15px 0px 0px 15px;
+	font-family: apple;
+	text-align: center;
+}
+.input,.label{
+	height: 35px;
+	line-height: 35px;
+}
+.btn_execute{
+	left: 570px;
+	width: 70px;
+}
+.btn_execute,.btn_execute_with_check{
+	position: absolute;
+	top:5px;
+	height: 25px;
+	line-height: 25px;
+	background-image: -moz-linear-gradient(top,#eee,#ccc);
+	background-image: -webkit-linear-gradient(top,#eee,#ccc);
+	font-family: apple;
+	margin-left: 20px;
+	border-radius: 5px;
+
+	text-align: center;
+	cursor: pointer;
+	font-size: 10px;
+}
+.btn_execute:active{
+	background-image: -moz-linear-gradient(top,#ccc,#eee);
+	background-image: -webkit-linear-gradient(top,#ccc,#eee);
+}
