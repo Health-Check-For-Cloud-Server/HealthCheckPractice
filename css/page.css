@@ -41,7 +41,7 @@ body{
 	width: 120px;
 	height: 120px;
 	background-color: mediumpurple;
-	right: 100px;
+	right: 20px;
 	top: 300px;
 	border-radius:25px;
 	font-family: cursive;
@@ -69,15 +69,20 @@ body{
 .div_session{
 	position: relative;
 	background-color: #fff;
-	width: 760px;
-	padding: 20px;
-	margin: 20px 100px 20px 100px;
+	width: 1000px;
 	box-shadow: 5px 5px 25px #aaa;
 	border-radius: 5px;
+	margin: 50px 0px 50px 0px;
+}
+.wrap_session_content{
+	width: 800px;
+	margin: auto;
+	padding: 50px 0px 50px 0px;
 }
 .label_session{
 	position: absolute;
 	left: -120px;
+	top:20px;
 	background-color: #3581ff;
 	color: #ffffff;
 	width: 100px;
@@ -87,17 +92,47 @@ body{
 	border-radius: 10px 0px 0px 10px;
 	font-family: apple;
 }
+.div_close{
+	position: absolute;
+	right:  1px;
+	top: 1px;
+	width: 40px;
+	height: 20px;
+	line-height: 22px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	background-image: -moz-linear-gradient(top,#ccc,#aaa);
+	background-image: -webkit-linear-gradient(top,#ccc,#aaa);
+	text-align: center;
+	cursor: pointer;
+}
+.div_close:hover{
+	background-image: -moz-linear-gradient(top,#f33,#e00);
+	background-image: -webkit-linear-gradient(top,#f33,#e00);
+}
 .div_test,.div_run{
+	overflow: hidden;
 	height: 50px;
-	background-color: red;
-	position: relative;
 }
 
 .div_check{
 
 }
+.div_add{
+	height: 50px;
+}
 .btn_add{
-
+	float: left;
+	background-color: #3581ff;
+	height: 50px;
+	line-height: 50px;
+	font-size: 25px;
+	color: #fff;
+	font-family: apple;
+	width: 300px;
+	text-align: center;
+	margin: 0px 40px 0px 40px;
 }
 
 .input{
@@ -109,37 +144,55 @@ body{
 }
 .label{
 	float: left;
-	background-color: #555555;
+	background-image: -moz-linear-gradient(top,#aaa,#333);
+	background-image: -webkit-linear-gradient(top,#aaa,#333);
 	color: #fff;
 	width: 80px;
 	border-radius: 15px 0px 0px 15px;
 	font-family: apple;
 	text-align: center;
+	text-shadow: 2px 2px 2px #000;
 }
 .input,.label{
 	height: 35px;
 	line-height: 35px;
 }
-.btn_execute{
-	left: 570px;
-	width: 70px;
+.choice_with_check{
+	float: left;
+	height: 35px;
+	line-height: 35px;
 }
-.btn_execute,.btn_execute_with_check{
-	position: absolute;
-	top:5px;
+.choice_with_check input{
+	margin-top: 12px;
+	float: left;
+	margin-right: 5px;
+}
+.choice_with_check p{
+	float: left;
+	font-size: 10px;
+	font-family: apple;
+
+}
+.btn_execute{
+	float: left;
+	height: 35px;
+	width: 70px;
+	margin: 0px 10px 0px 20px;
+}
+.btn_execute p{
 	height: 25px;
 	line-height: 25px;
 	background-image: -moz-linear-gradient(top,#eee,#ccc);
 	background-image: -webkit-linear-gradient(top,#eee,#ccc);
 	font-family: apple;
-	margin-left: 20px;
 	border-radius: 5px;
-
 	text-align: center;
 	cursor: pointer;
 	font-size: 10px;
+	margin: 5px 0px 5px 0px;
+	border: 2px solid #ddd;
 }
-.btn_execute:active{
+.btn_execute p:active{
 	background-image: -moz-linear-gradient(top,#ccc,#eee);
 	background-image: -webkit-linear-gradient(top,#ccc,#eee);
 }
