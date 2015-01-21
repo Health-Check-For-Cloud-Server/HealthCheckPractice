@@ -143,14 +143,13 @@ function get_session_num(){
 function remove_session(session){
 	//change session number
 	session_num--;
-
 	session.nextAll().each(function(){
 		var label_num = parseInt($(this).children().first().children().text()) -1;
-
 		$(this).children().first().children().text(label_num);
-
+	});
+	//remove session
+	session.animate({height:'toggle',opacity:'0',margin:'0px'},800,function(){
+		session.remove();
 	});
 
-	//remove this session
-	session.remove();
 }
