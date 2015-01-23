@@ -13,7 +13,11 @@ function add_a_new_session(block){
 
 	block.append(div_session);
 
-	div_session.fadeIn(800);
+	div_session.animate({height:'toggle',margin:'toggle'},800,function(){
+		div_session.children().last().children(".div_test").first().children(".input").first().focus();
+	});
+	$("body").animate({scrollTop:div_session.offset().top},800);
+
 }
 
 function create_a_new_session(){
