@@ -1,5 +1,5 @@
 ﻿var session_num = 0;
-var flag = 0;
+var animate_time =800;
 
 function event_bind(){
 	$("#btn_add_a_new_session").click(function(){
@@ -13,11 +13,24 @@ function add_a_new_session(block){
 
 	block.append(div_session);
 
-	div_session.animate({height:'toggle',margin:'toggle'},800,function(){
+	div_session.animate({height:'toggle',margin:'toggle'},animate_time,function(){
 		div_session.children().last().children(".div_test").first().children(".input").first().focus();
 	});
-	$("body").animate({scrollTop:div_session.offset().top},800);
+	$("body").animate({scrollTop:div_session.offset().top},animate_time);
 
+}
+
+function remove_session(session){
+	//change session number
+	session_num--;
+	session.nextAll().each(function(){
+		var label_num = parseInt($(this).children().first().children().text()) -1;
+		$(this).children().first().children().text(label_num);
+	});
+	//remove session
+	session.animate({height:'toggle',opacity:'0',margin:'0px'},animate_time,function(){
+		session.remove();
+	});
 }
 
 function create_a_new_session(){
@@ -38,11 +51,13 @@ function create_a_new_session(){
 	div_session.append(wrap_session);
 
 	close.click(function(){
+		close.unbind();									//avoid repeat event
 		remove_session(div_session);
 	});
 
 	return div_session;
 }
+
 function create_a_session_label(){
 	var session_label =
 		$("<div class='label_session'></div>");
@@ -55,6 +70,7 @@ function create_a_session_label(){
 
 	return session_label;
 }
+
 function create_a_test(){
 	var div_test = $("<div class='div_test'></div>");
 	var label =  create_a_label("Test");
@@ -67,6 +83,7 @@ function create_a_test(){
 
 	return div_test;
 }
+
 function create_a_run(){
 	var div_run = $("<div class='div_run'></div>");
 	var label =  create_a_label("Run");
@@ -81,6 +98,7 @@ function create_a_run(){
 
 	return div_run;
 }
+
 function create_an_add(){
 	var add = $("<div class='div_add'></div>");
 	var btn_add_a_RC_check =
@@ -93,6 +111,7 @@ function create_an_add(){
 
 	return add;
 }
+
 function create_an_add_button(add_what){
 	var add_button = $("<p class='btn_add'></p>");
 	add_button.text(add_what);
@@ -144,16 +163,4 @@ function create_a_close_button(){
 function get_session_num(){
 	return ++session_num;
 }
-function remove_session(session){
-	//change session number
-	session_num--;
-	session.nextAll().each(function(){
-		var label_num = parseInt($(this).children().first().children().text()) -1;
-		$(this).children().first().children().text(label_num);
-	});
-	//remove session
-	session.animate({height:'toggle',opacity:'0',margin:'0px'},800,function(){
-		session.remove();
-	});
 
-}
