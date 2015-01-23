@@ -7,6 +7,10 @@ function event_bind(){
 	});
 }
 
+function get_session_num(){
+	return ++session_num;
+}
+
 function add_a_new_session(block){
 	var div_session = create_a_new_session();
 	div_session.hide();
@@ -18,19 +22,6 @@ function add_a_new_session(block){
 	});
 	$("body").animate({scrollTop:div_session.offset().top},animate_time);
 
-}
-
-function remove_session(session){
-	//change session number
-	session_num--;
-	session.nextAll().each(function(){
-		var label_num = parseInt($(this).children().first().children().text()) -1;
-		$(this).children().first().children().text(label_num);
-	});
-	//remove session
-	session.animate({height:'toggle',opacity:'0',margin:'0px'},animate_time,function(){
-		session.remove();
-	});
 }
 
 function create_a_new_session(){
@@ -56,6 +47,19 @@ function create_a_new_session(){
 	});
 
 	return div_session;
+}
+
+function remove_session(session){
+	//change session number
+	session_num--;
+	session.nextAll().each(function(){
+		var label_num = parseInt($(this).children().first().children().text()) -1;
+		$(this).children().first().children().text(label_num);
+	});
+	//remove session
+	session.animate({height:'toggle',opacity:'0',margin:'0px'},animate_time,function(){
+		session.remove();
+	});
 }
 
 function create_a_session_label(){
@@ -160,7 +164,5 @@ function create_a_close_button(){
 
 	return close;
 }
-function get_session_num(){
-	return ++session_num;
-}
+
 
